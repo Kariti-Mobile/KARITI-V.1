@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Cor ao CLICAR  -->
+    <item android:state_pressed="true">
+        <!-- SOLID - COR DO BOTÃO    -->
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/holo_purple"/>
+
+            <!--Config das BORDAS - STROKE-->
+            <stroke
+                android:width="2dp"
+                android:color="@android:color/background_dark"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="4dp"/>
+            <solid android:color="@color/tranparente"/>
+            <stroke android:width="2dp"
+                android:color="@android:color/holo_purple"/>
+        </shape>
+    </item>
+</selector>

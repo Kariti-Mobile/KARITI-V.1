@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fundo_night"
+    tools:context="online.padev.kariti.ProvaActivity">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/appbarquestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <View
+        android:id="@+id/divider4"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include" />
+
+    <Button
+        android:id="@+id/buttonCadProva"
+        style="@style/COLORTEXT"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_selector"
+        android:padding="5dp"
+        android:text="@string/buttonCadProva"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonGerarCatao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider4" />
+
+    <Button
+        android:id="@+id/buttonGerarCatao"
+        style="@style/COLORTEXT"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_selector"
+        android:padding="5dp"
+        android:text="@string/buttonGerarCartao"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonCorrigirProva"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCadProva" />
+
+    <Button
+        android:id="@+id/buttonCorrigirProva"
+        style="@style/COLORTEXT"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_selector"
+        android:padding="5dp"
+        android:text="@string/buttonCorrigirProva"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonVisuProva"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonGerarCatao" />
+
+    <Button
+        android:id="@+id/buttonVisuProva"
+        style="@style/COLORTEXT"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_selector"
+        android:text="@string/buttonVisuProva"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonEdicaoProva"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCorrigirProva" />
+
+    <Button
+        android:id="@+id/buttonEdicaoProva"
+        style="@style/COLORTEXT"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_selector"
+        android:text="@string/textViewEditProva"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonVisuProva" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        style="@style/COLORIMGICONE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/imgBtnSeta"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonCadProva"
+        app:layout_constraintEnd_toEndOf="@+id/buttonCadProva"
+        app:layout_constraintHorizontal_bias="0.972"
+        app:layout_constraintStart_toStartOf="@+id/buttonCadProva"
+        app:layout_constraintTop_toTopOf="@+id/buttonCadProva"
+        app:layout_constraintVertical_bias="0.47"
+        app:srcCompat="@mipmap/ic_arrownext" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        style="@style/COLORIMGICONE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/imgBtnSeta"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonGerarCatao"
+        app:layout_constraintEnd_toEndOf="@+id/buttonGerarCatao"
+        app:layout_constraintHorizontal_bias="0.979"
+        app:layout_constraintStart_toStartOf="@+id/buttonGerarCatao"
+        app:layout_constraintTop_toTopOf="@+id/buttonGerarCatao"
+        app:layout_constraintVertical_bias="0.47"
+        app:srcCompat="@mipmap/ic_arrownext" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        style="@style/COLORIMGICONE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/imgBtnSeta"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonCorrigirProva"
+        app:layout_constraintEnd_toEndOf="@+id/buttonCorrigirProva"
+        app:layout_constraintHorizontal_bias="0.979"
+        app:layout_constraintStart_toStartOf="@+id/buttonCorrigirProva"
+        app:layout_constraintTop_toTopOf="@+id/buttonCorrigirProva"
+        app:layout_constraintVertical_bias="0.529"
+        app:srcCompat="@mipmap/ic_arrownext" />
+
+    <ImageView
+        android:id="@+id/imageViewSetaOpcoes"
+        style="@style/COLORIMGICONE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/imgBtnSeta"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonEdicaoProva"
+        app:layout_constraintEnd_toEndOf="@+id/buttonEdicaoProva"
+        app:layout_constraintHorizontal_bias="0.963"
+        app:layout_constraintStart_toStartOf="@+id/buttonEdicaoProva"
+        app:layout_constraintTop_toTopOf="@+id/buttonEdicaoProva"
+        app:layout_constraintVertical_bias="0.518"
+        app:srcCompat="@mipmap/ic_arrownext" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        style="@style/COLORIMGICONE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/imgBtnSeta"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonVisuProva"
+        app:layout_constraintEnd_toEndOf="@+id/buttonVisuProva"
+        app:layout_constraintHorizontal_bias="0.966"
+        app:layout_constraintStart_toStartOf="@+id/buttonVisuProva"
+        app:layout_constraintTop_toTopOf="@+id/buttonVisuProva"
+        app:layout_constraintVertical_bias="0.518"
+        app:srcCompat="@mipmap/ic_arrownext" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        style="@style/COLORIMGICONE"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:contentDescription="@string/iconeProva"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonCadProva"
+        app:layout_constraintEnd_toEndOf="@+id/buttonCadProva"
+        app:layout_constraintHorizontal_bias="0.038"
+        app:layout_constraintStart_toStartOf="@+id/buttonCadProva"
+        app:layout_constraintTop_toTopOf="@+id/buttonCadProva"
+        app:srcCompat="@mipmap/prova" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        style="@style/COLORIMGICONE"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:contentDescription="@string/iconeProva"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonGerarCatao"
+        app:layout_constraintEnd_toEndOf="@+id/buttonGerarCatao"
+        app:layout_constraintHorizontal_bias="0.034"
+        app:layout_constraintStart_toStartOf="@+id/buttonGerarCatao"
+        app:layout_constraintTop_toTopOf="@+id/buttonGerarCatao"
+        app:layout_constraintVertical_bias="0.428"
+        app:srcCompat="@mipmap/prova" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        style="@style/COLORIMGICONE"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:contentDescription="@string/iconeCorrigir"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonCorrigirProva"
+        app:layout_constraintEnd_toEndOf="@+id/buttonCorrigirProva"
+        app:layout_constraintHorizontal_bias="0.024"
+        app:layout_constraintStart_toStartOf="@+id/buttonCorrigirProva"
+        app:layout_constraintTop_toTopOf="@+id/buttonCorrigirProva"
+        app:srcCompat="@mipmap/edit" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        style="@style/COLORIMGICONE"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="4dp"
+        android:contentDescription="@string/iconeSearch"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonVisuProva"
+        app:layout_constraintEnd_toEndOf="@+id/buttonVisuProva"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toStartOf="@+id/buttonVisuProva"
+        app:layout_constraintTop_toTopOf="@+id/buttonVisuProva"
+        app:layout_constraintVertical_bias="0.55"
+        app:srcCompat="@mipmap/search" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

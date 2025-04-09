@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/fundo_night"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Base.Theme.Kariti"
+    tools:context="online.padev.kariti.DetalhesEscolaActivity">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/appbarquestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <GridLayout
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:columnCount="2"
+        android:rowCount="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.604"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.471">
+
+        <ImageView
+            android:id="@+id/imageButton9"
+            style="@style/COLORIMGICONE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/iconeAluno"
+            app:layout_constraintEnd_toStartOf="@+id/buttonAluno"
+            app:srcCompat="@mipmap/student" />
+
+        <Button
+            android:id="@+id/buttonAluno"
+            style="@style/BUTTONSTYLE"
+            android:layout_width="match_parent"
+            android:layout_marginEnd="70dp"
+            android:text="@string/textViewAluno"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/imageButton6"
+            style="@style/COLORIMGICONE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="58dp"
+            android:contentDescription="@string/iconeTurma"
+            app:layout_constraintEnd_toStartOf="@+id/btnTurma"
+            app:srcCompat="@mipmap/turma" />
+
+        <Button
+            android:id="@+id/btnTurma"
+            style="@style/BUTTONSTYLE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="70dp"
+            android:text="@string/textViewTurma"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonAluno" />
+
+        <ImageView
+            android:id="@+id/imageButton8"
+            style="@style/COLORIMGICONE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="25dp"
+            android:contentDescription="@string/iconeProva"
+            app:layout_constraintEnd_toStartOf="@+id/btnProva"
+            app:layout_constraintHorizontal_bias="0.987"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton6"
+            app:srcCompat="@mipmap/prova" />
+
+        <Button
+            android:id="@+id/btnProva"
+            style="@style/BUTTONSTYLE"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="70dp"
+            android:text="@string/textViewProva"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnTurma"
+            tools:ignore="MissingConstraints" />
+
+
+    </GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

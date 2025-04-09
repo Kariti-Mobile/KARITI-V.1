@@ -1,0 +1,84 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Kariti" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/corLinks</item>
+    </style>
+
+    <style name="Theme.Kariti" parent="Base.Theme.Kariti" />
+
+    <style name="ICONSENHA">
+        <item name="android:tint">@color/cinzaText</item>
+    </style>
+
+    <style name="BUTTONSFLUTUANTES">
+        <item name="android:backgroundTint">@color/corLinks</item>
+    </style>
+
+    <style name="BARRASPRINCIPAIS">
+        <item name="android:background">@color/corLinks</item>
+    </style>
+
+    <style name="FUNDONOMES">
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="SETADIRECIONAL">
+        <item name="android:tint">@color/black</item>
+    </style>
+
+    <style name="BACKGROUNDBARRA">
+        <item name="android:background">@color/black</item>
+    </style>
+
+    <style name="BORDAEDITTEXT">
+        <item name="android:backgroundTint">@color/black</item>
+    </style>
+
+    <style name="CAMPOSEDITTEXT">
+        <item name="android:backgroundTint">@color/black</item>
+        <item name="android:textColorHint">@color/cinzaText</item>
+    </style>
+
+    <style name="BORDABOTOES">
+        <item name="android:backgroundTint">@color/black</item>
+    </style>
+
+    <style name="COLORTEXTINSERT">
+        <item name="android:textColorHint">@color/cinzaText</item>
+    </style>
+
+    <style name="BACKGROUND">
+        <item name="android:background">@android:color/background_light</item>
+    </style>
+
+    <style name="COLORIMGICONE">
+        <item name="android:tint">@color/black</item>
+    </style>
+
+    <style name="BUTTONSTYLE" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/button_selector</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="BUTTONSTYLEdark" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/button_select_dark</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="COLORTEXT">
+        <item name="android:textColor">@android:color/background_dark</item>
+    </style>
+
+    <style name="COLORTXTCLICK">
+        <item name="android:textColor">@color/corLinks</item>
+    </style>
+
+    <style name="STATURBARTHEME" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Outras configurações do tema -->
+        <item name="android:statusBarColor">@android:color/holo_purple</item>
+    </style>
+
+</resources>

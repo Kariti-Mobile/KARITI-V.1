@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fundo_night"
+    tools:context="online.padev.kariti.CadProvaActivity">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+
+    <TextView
+        android:id="@+id/textView8"
+        style="@style/COLORTEXT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textViewDataProva"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/datePickerButton"
+        app:layout_constraintEnd_toStartOf="@+id/datePickerButton"
+        app:layout_constraintHorizontal_bias="0.423"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/datePickerButton"
+        app:layout_constraintVertical_bias="0.307" />
+
+    <Button
+        android:id="@+id/datePickerButton"
+        style="@style/BUTTONSTYLE"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_centerInParent="true"
+        android:text="@string/buttonData"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.825"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerTurmaPprova" />
+
+    <EditText
+        android:id="@+id/editTextNomeProva"
+        style="@style/CAMPOSEDITTEXT"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/borda_botao"
+        android:ems="10"
+        android:hint="@string/editTextNomeProva"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerTurmaPprova"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinnerTurmaPprova"
+        style="@style/CAMPOSEDITTEXT"
+        android:layout_width="320dp"
+        android:layout_height="48dp"
+        android:background="@drawable/style_spinner"
+        app:layout_constraintBottom_toTopOf="@+id/datePickerButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNomeProva" />
+
+    <Button
+        android:id="@+id/btnGerarProva"
+        style="@style/BUTTONSTYLE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/buttonGerarProva"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout3" />
+
+    <GridLayout
+        android:id="@+id/gridLayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:columnCount="4"
+        android:rowCount="2"
+        app:layout_constraintBottom_toTopOf="@+id/btnGerarProva"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/datePickerButton">
+
+        <TextView
+            android:id="@+id/textView9"
+            style="@style/COLORTEXT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_marginEnd="5dp"
+            android:text="@string/textViewQuantQuestoes"
+            android:textSize="16sp"
+            tools:layout_editor_absoluteX="46dp"
+            tools:layout_editor_absoluteY="358dp" />
+
+        <ImageButton
+            android:id="@+id/imageButtonMenosQuest"
+            style="@style/COLORIMGICONE"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:background="@color/tranparente"
+            android:contentDescription="@string/iconeMenosQuast"
+            app:srcCompat="@mipmap/subtract"
+            tools:layout_editor_absoluteX="133dp"
+            tools:layout_editor_absoluteY="332dp" />
+
+        <TextView
+            android:id="@+id/textViewQuantity"
+            style="@style/COLORTEXT"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:paddingTop="10dp"
+            android:text="@string/buttonQtd"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/imageButtonMaisQuest"
+            style="@style/COLORIMGICONE"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@color/tranparente"
+            android:contentDescription="@string/iconeAddMaisQuest"
+            app:srcCompat="@mipmap/btnadicionar"
+            tools:layout_editor_absoluteX="86dp"
+            tools:layout_editor_absoluteY="267dp" />
+
+        <TextView
+            android:id="@+id/textView10"
+            style="@style/COLORTEXT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/textViewQuantAltern"
+            android:textSize="16sp"
+            tools:layout_editor_absoluteX="46dp"
+            tools:layout_editor_absoluteY="416dp" />
+
+        <ImageButton
+            android:id="@+id/imgBtnMenoAlter"
+            style="@style/COLORIMGICONE"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@color/tranparente"
+            android:contentDescription="@string/iconeMenosAlter"
+            android:layout_marginTop="20dp"
+            app:srcCompat="@mipmap/subtract"
+            tools:layout_editor_absoluteX="133dp"
+            tools:layout_editor_absoluteY="332dp" />
+
+        <TextView
+            android:id="@+id/textVieAlter"
+            style="@style/COLORTEXT"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:paddingTop="10dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/buttonQtd"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/imgBtnMaisAlter"
+            style="@style/COLORIMGICONE"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/tranparente"
+            android:contentDescription="@string/iconeAddMaisAlter"
+            app:srcCompat="@mipmap/btnadicionar" />
+    </GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

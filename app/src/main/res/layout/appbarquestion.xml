@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/myToolBarMenu"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        style="@style/BARRASPRINCIPAIS"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/imgBtnVoltaDescola"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@color/tranparente"
+            android:contentDescription="@string/iconeVoltar"
+            android:src="@mipmap/setaleft" />
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:hint="@string/app_name"
+            android:hyphenationFrequency="none"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="24sp" />
+
+        <!-- Componente alinhado à direita -->
+        <ImageButton
+            android:id="@+id/iconHelp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="7dp"
+            android:background="@color/tranparente"
+            android:contentDescription="@string/textAjuda"
+            android:src="@mipmap/question" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

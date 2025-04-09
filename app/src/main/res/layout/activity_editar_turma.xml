@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fundo_night"
+    tools:context="online.padev.kariti.EditarTurmaActivity">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/appbarquestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <EditText
+        android:id="@+id/editTextEditTurma"
+        style="@style/CAMPOSEDITTEXT"
+        android:layout_width="320dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/borda_botao"
+        android:ems="16"
+        android:hint="@string/editTextNomeTurma"
+        android:inputType="text"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerBuscAlunoNovos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include"
+        tools:ignore="Autofill" />
+
+    <Spinner
+        android:id="@+id/spinnerBuscAlunoNovos"
+        style="@style/BORDABOTOES"
+        android:layout_width="320dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/style_spinner"
+        app:layout_constraintBottom_toTopOf="@+id/listViewEditarTurma"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEditTurma">
+
+    </Spinner>
+
+    <TextView
+        android:id="@+id/txtVieAlunos"
+        style="@style/COLORTEXT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/textViewAlunos"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/listViewEditarTurma"
+        app:layout_constraintEnd_toEndOf="@+id/listViewEditarTurma"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/listViewEditarTurma"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerBuscAlunoNovos"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ListView
+        android:id="@+id/listViewEditarTurma"
+        style="@style/BORDABOTOES"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/borda_botao"
+        app:layout_constraintBottom_toTopOf="@+id/layoutEditIncluirAlun"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerBuscAlunoNovos" />
+
+    <LinearLayout
+        android:id="@+id/layoutEditIncluirAlun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSalvarTurma"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listViewEditarTurma">
+
+        <TextView
+            android:id="@+id/textView4"
+            style="@style/COLORTEXT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:text="@string/textViewAlunoAnonim"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintTop_toBottomOf="@id/listViewCadTurma">
+
+            <ImageView
+                android:id="@+id/imageViewMenosNovosAnonimos"
+                style="@style/COLORIMGICONE"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:contentDescription="@string/iconeMenosAnonimos"
+                android:padding="3dp"
+                app:srcCompat="@mipmap/subtract" />
+
+            <EditText
+                android:id="@+id/editTextNovosAlunosAnonimos"
+                style="@style/CAMPOSEDITTEXT"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/borda_botao"
+                android:ems="4"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:padding="3dp"
+                android:text="@string/valorZero"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/imageViewMaisNovosAnonimos"
+                style="@style/COLORIMGICONE"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:contentDescription="@string/iconeAddMaisAnonimos"
+                android:padding="3dp"
+                app:srcCompat="@mipmap/btnadicionar" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonSalvarTurma"
+        style="@style/BUTTONSTYLE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/buttonSalvTurma"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutEditIncluirAlun" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

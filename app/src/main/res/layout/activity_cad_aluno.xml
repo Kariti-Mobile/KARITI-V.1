@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fundo_night"
+    tools:context="online.padev.kariti.CadAlunoActivity">
+
+    <ImageButton
+        android:id="@+id/imgBtnVoltaEscola"
+        style="@style/SETADIRECIONAL"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@color/tranparente"
+        android:contentDescription="@string/iconeVoltar"
+        android:src="@mipmap/setaleft"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <ImageView
+        android:id="@+id/imageViewPerson"
+        style="@style/COLORIMGICONE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/buttonVisuAluno"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.119"
+        app:srcCompat="@mipmap/person" />
+
+    <View
+        android:id="@+id/dividercadaluno"
+        style="@style/BACKGROUNDBARRA"
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewPerson" />
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:columnCount="1"
+        android:rowCount="2"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSalvarEdit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dividercadaluno">
+
+
+        <RelativeLayout
+            android:id="@+id/relativeNome"
+            style="@style/BORDABOTOES"
+            android:layout_width="320dp"
+            android:layout_height="48dp"
+            android:background="@drawable/borda_botao"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewPerson">
+
+            <ImageView
+                android:id="@+id/imageView17"
+                style="@style/COLORIMGICONE"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="2dp"
+                android:contentDescription="@string/iconeUser"
+                app:layout_constraintHorizontal_bias="0.022"
+                app:layout_constraintVertical_bias="0.555"
+                app:srcCompat="@mipmap/usuario" />
+
+            <EditText
+                android:id="@+id/editTextAlunoCad"
+                style="@style/COLORTEXTINSERT"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="0dp"
+                android:layout_toEndOf="@+id/imageView17"
+                android:autofillHints="name"
+                android:hint="@string/nomeCompleto"
+                android:inputType="textPersonName|none"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.491"
+                app:layout_constraintStart_toStartOf="parent" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            style="@style/BORDABOTOES"
+            android:layout_width="320dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/borda_botao"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/relativeNome">
+
+            <ImageView
+                android:id="@+id/imageView5"
+                style="@style/COLORIMGICONE"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="2dp"
+                android:contentDescription="@string/iconeEmail"
+                app:layout_constraintHorizontal_bias="0.022"
+                app:layout_constraintVertical_bias="0.555"
+                app:srcCompat="@mipmap/email" />
+
+            <EditText
+                android:id="@+id/editTextEmailCad"
+                style="@style/COLORTEXTINSERT"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="0dp"
+                android:layout_toEndOf="@+id/imageView5"
+                android:autofillHints="emailAddress"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.527"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="265dp" />
+
+        </RelativeLayout>
+    </GridLayout>
+
+    <Button
+        android:id="@+id/buttonSalvarEdit"
+        style="@style/BUTTONSTYLE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/buttonCadastrar"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

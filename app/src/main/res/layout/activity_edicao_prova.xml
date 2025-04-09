@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fundo_night"
+    tools:context="online.padev.kariti.CadProvaActivity">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <View
+        android:id="@+id/divider4"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintTop_toBottomOf="@+id/include"
+        tools:layout_editor_absoluteX="2dp"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/EdicaoProva"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/borda_botao"
+        android:ems="10"
+        android:hint="@string/editTextNomeProva"
+        android:inputType="text"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider4" />
+
+    <Spinner
+        android:id="@+id/EdicaoTurma"
+        android:layout_width="320dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EdicaoProva"
+        android:background="@drawable/style_spinner"/>
+
+    <TextView
+        android:id="@+id/EdicaoData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/textViewDataProva"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/NovaData"
+        app:layout_constraintHorizontal_bias="0.285"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EdicaoTurma" />
+
+
+    <Button
+        android:id="@+id/NovaData"
+        style="@style/BUTTONSTYLE"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="36dp"
+        android:text="@string/buttonData"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/btnEditProximo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EdicaoTurma"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/EdicaoQuestoes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/textViewQuantQuestoes"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout2"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EdicaoData" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NovaData">
+
+        <ImageButton
+            android:id="@+id/menosquest"
+            android:layout_width="57dp"
+            android:layout_height="50dp"
+            android:background="@color/tranparente"
+            android:contentDescription="Menos Questões"
+            app:srcCompat="@mipmap/subtract"
+            tools:layout_editor_absoluteX="133dp"
+            tools:layout_editor_absoluteY="332dp" />
+
+        <TextView
+            android:id="@+id/qtdQuestoes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="@string/buttonQtd"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/maisquest"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:background="@color/tranparente"
+            android:contentDescription="Mais Questões"
+            app:srcCompat="@mipmap/btnadicionar"
+            tools:layout_editor_absoluteX="86dp"
+            tools:layout_editor_absoluteY="267dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/EdicaoAlternativas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/textViewQuantAltern"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayoutAlter"
+        app:layout_constraintHorizontal_bias="0.678"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EdicaoQuestoes" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutAlter"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="32dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/btnEditProximo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageButton
+            android:id="@+id/menosAlter"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:background="@color/tranparente"
+            android:contentDescription="Menos Alternativas"
+            app:srcCompat="@mipmap/subtract"
+            tools:layout_editor_absoluteX="133dp"
+            tools:layout_editor_absoluteY="332dp" />
+
+        <TextView
+            android:id="@+id/qtdAlternativas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="@string/buttonQtd"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/maisAlter"
+            android:layout_width="55dp"
+            android:layout_height="50dp"
+            android:background="@color/tranparente"
+            android:contentDescription="Mais Alternativas"
+            app:srcCompat="@mipmap/btnadicionar"
+            tools:layout_editor_absoluteX="86dp"
+            tools:layout_editor_absoluteY="267dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnEditProximo"
+        style="@style/BUTTONSTYLE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/buttonProximo"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EdicaoAlternativas" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

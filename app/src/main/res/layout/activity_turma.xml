@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fundo_night"
+    tools:context="online.padev.kariti.TurmaActivity">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/appbarquestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/buttonCadAluno"
+        style="@style/BUTTONSTYLE"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_selector"
+        android:padding="5dp"
+        android:text="@string/buttonCadTurma"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.615"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include"
+        app:layout_constraintVertical_bias="0.297" />
+
+    <Button
+        android:id="@+id/buttonVisuTurma"
+        style="@style/BUTTONSTYLE"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_selector"
+        android:padding="5dp"
+        android:text="@string/buttonVisuTurma"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.615"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCadAluno"
+        app:layout_constraintVertical_bias="0.213" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        style="@style/COLORIMGICONE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/imgBtnSeta"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonCadAluno"
+        app:layout_constraintEnd_toEndOf="@+id/buttonCadAluno"
+        app:layout_constraintHorizontal_bias="0.961"
+        app:layout_constraintStart_toStartOf="@+id/buttonCadAluno"
+        app:layout_constraintTop_toTopOf="@+id/buttonCadAluno"
+        app:layout_constraintVertical_bias="0.529"
+        app:srcCompat="@mipmap/ic_arrownext" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        style="@style/COLORIMGICONE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/imgBtnSeta"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonVisuTurma"
+        app:layout_constraintEnd_toEndOf="@+id/buttonVisuTurma"
+        app:layout_constraintHorizontal_bias="0.975"
+        app:layout_constraintStart_toStartOf="@+id/imageView13"
+        app:layout_constraintTop_toTopOf="@+id/buttonVisuTurma"
+        app:layout_constraintVertical_bias="0.529"
+        app:srcCompat="@mipmap/ic_arrownext" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        style="@style/COLORIMGICONE"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:contentDescription="@string/iconeTurma"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonCadAluno"
+        app:layout_constraintEnd_toEndOf="@+id/buttonCadAluno"
+        app:layout_constraintHorizontal_bias="0.048"
+        app:layout_constraintStart_toStartOf="@+id/buttonCadAluno"
+        app:layout_constraintTop_toTopOf="@+id/buttonCadAluno"
+        app:layout_constraintVertical_bias="0.571"
+        app:srcCompat="@mipmap/student" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        style="@style/COLORIMGICONE"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:contentDescription="@string/iconeSearch"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonVisuTurma"
+        app:layout_constraintEnd_toEndOf="@+id/buttonVisuTurma"
+        app:layout_constraintHorizontal_bias="0.031"
+        app:layout_constraintStart_toStartOf="@+id/buttonVisuTurma"
+        app:layout_constraintTop_toTopOf="@+id/buttonVisuTurma"
+        app:layout_constraintVertical_bias="0.571"
+        app:srcCompat="@mipmap/search" />
+
+    <View
+        android:id="@+id/divider4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintTop_toBottomOf="@+id/include"
+        tools:layout_editor_absoluteX="2dp"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

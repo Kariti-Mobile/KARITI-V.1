@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/fundo_night"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="online.padev.kariti.LoginActivity">
+
+    <TextView
+        android:id="@+id/textView6"
+        style="@style/COLORTEXT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/textViewInformeSenha"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/editTextSenha"
+        app:layout_constraintEnd_toEndOf="@+id/editTextSenha"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextSenha"
+        app:layout_constraintTop_toBottomOf="@+id/editTextLogin" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:contentDescription="@string/imgProfessor"
+        app:layout_constraintBottom_toTopOf="@+id/editTextLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/teacher" />
+
+    <TextView
+        android:id="@+id/textView5"
+        style="@style/COLORTEXT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/textViewLoginEntrar"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/editTextLogin"
+        app:layout_constraintEnd_toEndOf="@+id/editTextLogin"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextLogin"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/editTextLogin"
+        style="@style/COLORTEXTINSERT"
+        android:layout_width="320dp"
+        android:layout_height="48dp"
+        android:autofillHints="emailAddress"
+        android:ems="15"
+        android:hint="@string/email"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/editTextSenha"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        tools:ignore="TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/editTextSenha"
+        style="@style/COLORTEXTINSERT"
+        android:layout_width="320dp"
+        android:layout_height="48dp"
+        android:autofillHints="password"
+        android:ems="10"
+        android:hint="@string/senhahint"
+        android:maxLength="16"
+        android:textAlignment="center"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/buttonEntrarL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextLogin" />
+
+    <ImageButton
+        android:id="@+id/senhaoculta"
+        style="@style/ICONSENHA"
+        android:layout_width="43dp"
+        android:layout_height="34dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/acessoSenha"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextSenha"
+        app:layout_constraintEnd_toEndOf="@+id/editTextSenha"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextSenha"
+        app:layout_constraintTop_toTopOf="@+id/editTextSenha"
+        app:srcCompat="@mipmap/senhaoff"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/buttonEntrarL"
+        style="@style/BUTTONSTYLE"
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:text="@string/btnEntrar"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextSenha" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonEntrarL">
+
+        <TextView
+            android:id="@+id/textViewCriarConta"
+            style="@style/COLORTXTCLICK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:text="@string/criaConta"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonEntrarL" />
+
+        <Button
+            android:id="@+id/buttonEsqueciSenhaL"
+            style="@style/COLORTXTCLICK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:background="@color/tranparente"
+            android:text="@string/buttonEsqueciSenha"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewCriarConta"
+            app:layout_constraintVertical_bias="0.0" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
